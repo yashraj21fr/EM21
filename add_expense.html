@@ -6,16 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Expense</title>
     <link rel="stylesheet" href="static/style.css" />
-    <style>
-      body {
-        padding-top: 20px;
-        padding-bottom: 60px;
-      }
-      .container {
-        max-width: 600px;
-        margin: 0 auto;
-      }
-    </style>
   </head>
   <body>
     <div class="container">
@@ -29,8 +19,15 @@
           <label for="expense">Expense Name:</label>
           <input type="text" name="expense" id="expense" required />
         </div>
-        <!-- Other form fields -->
-        <button type="submit">Add Expense</button>
+        <div class="form-group">
+          <label for="amount">Amount:</label>
+          <input type="number" name="amount" id="amount" required />
+        </div>
+        <div class="form-group">
+          <label for="date">Date:</label>
+          <input type="date" name="date" id="date" required />
+        </div>
+        <button type="submit" class="btn">Add Expense</button>
       </form>
       <button class="back-btn" onclick="history.back()">Back</button>
     </div>
