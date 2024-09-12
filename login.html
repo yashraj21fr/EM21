@@ -2,47 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
-    />
+    <link rel="stylesheet" href="static/style.css" />
   </head>
   <body>
     <div class="container">
       <h1>Login</h1>
-      <hr />
-      <form action="{{ url_for('login') }}" method="post">
+      <form method="POST">
         <div class="form-group">
           <label for="username">Username:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="username"
-            name="username"
-            required
-          />
+          <input type="text" name="username" id="username" required />
         </div>
         <div class="form-group">
           <label for="password">Password:</label>
-          <input
-            type="password"
-            class="form-control"
-            id="password"
-            name="password"
-            required
-          />
+          <input type="password" name="password" id="password" required />
         </div>
-        <button type="submit" class="btn btn-primary">Login</button>
-        <a href="{{ url_for('register') }}" class="btn btn-link">Register</a>
+        <button type="submit">Login</button>
       </form>
+      <a href="register.html" class="link">Create an account</a>
     </div>
-
-    <script src="{{ url_for('static', filename='user.js') }}"></script>
   </body>
 </html>
